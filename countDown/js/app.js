@@ -2,7 +2,7 @@ const items = document.querySelectorAll(".countdown-item > h4");
 const countDownElement = document.querySelector(".countdown");
 
 // Почати дату відліку
-let countdownDate = new Date(2022, 22, 0, 22, 0, 0).getTime();
+let countdownDate = new Date(2025, 22, 0, 22, 0, 0).getTime();
 
 function getCountdownTime() {
   // Отримати теперішню дату
