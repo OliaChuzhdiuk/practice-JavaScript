@@ -12,17 +12,15 @@ body {
 }
 
 h1 {
-  font-family: "Poppins", sans-serif; /* сучасний шрифт */
+  font-family: "Poppins", sans-serif;
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
   color: aliceblue;
 
-  /* градієнтний текст */
   background: linear-gradient(90deg, #ff6a00, #ee0979);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 
-  /* плавна анімація при появі */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
@@ -34,40 +32,31 @@ h1 {
     transform: translateY(0);
   }
 }
-/* Контейнер */
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(200px, 1fr)
-  ); /* адаптивні колонки */
-  gap: 20px; /* відстань між карточками */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   padding: 20px;
   background-color: #eee;
-  list-style: none; /* прибираємо маркери ul */
+  list-style: none;
   margin: 0;
 }
 
-/* Окремі карточки */
-.grid li {
+.grid .card {
+  display: block; /* робимо посилання блочним */
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 20px;
   text-align: center;
-}
-
-/* Ефект при наведенні */
-.grid li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Посилання всередині карточки */
-.grid li a {
-  text-decoration: none;
+  text-decoration: none; /* прибираємо підкреслення */
   color: #333;
   font-weight: 600;
   font-size: 1.1rem;
+}
+.grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
